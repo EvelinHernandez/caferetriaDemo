@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Editar producto</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<header>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="/index" class="navbar-brand d-flex align-items-center">
+        <strong>Cafetería</strong>
+      </a>
+    </div>
+  </div>
+</header>
+<body>
+<a href="/index" class="navbar-brand d-flex align-items-center" style="padding: 10px;">
+	<strong> < Regresar</strong>
+</a>
+<h1 style="text-align: center;">Editar un producto</h1>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+		<form th:action="@{/editProducto/{id} (id=${productoEditar.idProducto})}" th:object="${productoEditar}" method="POST" style="height: 100%;">
+		  <div class="form-group" style="padding: 10px;">    
+		    <input type="text" name="nombreProducto" th:field="*{nombreProducto}" placeholder="Inserte nombre del producto" style="width: 100%;">    
+		  </div>
+		  <div class="form-group" style="padding: 10px;">    
+		    <input type="text" name="referencia" th:field="*{referencia}" placeholder="Inserte la referencia del producto" style="width: 100%;">    
+		  </div>
+		  <div class="form-group" style="padding: 10px;">    
+		    <input type="text" name="precio" th:field="*{precio}" placeholder="Inserte el precio del producto" style="width: 100%;">    
+		  </div>
+		  <div class="form-group" style="padding: 10px;">    
+		    <input type="text" name="peso" th:field="*{peso}" placeholder="Inserte el peso del producto" style="width: 100%;">    
+		  </div>
+		  <div class="form-group" style="padding: 10px;">    
+		    <input type="text" name="categoria" th:field="*{categoria}" placeholder="Inserte la categoria del producto" style="width: 100%;">    
+		  </div>
+		  <div class="form-group" style="padding: 10px;">    
+		    <input type="text" name="stock" th:field="*{stock}" placeholder="Inserte el stock del producto" style="width: 100%;">    
+		  </div>
+		  
+		  <div style="padding: 10px; text-align: center;">
+		  	<button type="submit" class="btn btn-success" style="width: 100%;">Guardar</button>
+		  </div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

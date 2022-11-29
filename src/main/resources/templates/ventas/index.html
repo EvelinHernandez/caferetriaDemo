@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Inicio</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<header>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="/index" class="navbar-brand d-flex align-items-center">
+        <strong>Cafetería</strong>
+      </a>
+    </div>
+  </div>
+</header>
+<body>
+	<div>
+	<a href="/index" class="navbar-brand d-flex align-items-center" style="padding: 10px;">
+        <strong> < Regresar</strong>
+    </a>
+	<h1 style="text-align: center;">Lista de ventas</h1>
+</div>
+
+
+<div class="album py-5 bg-light">
+    <div class="container">
+    <div style="text-align: right;">    	
+		<a class="btn btn-warning btn-lg btn-block"  th:href="@{/insertarVenta}" role="button style="text-align: left;"">Vender producto</a>
+	</div>
+		<table class="table" >
+			<tr>
+				<th>Id venta</th>
+				<th>Id del producto</th>
+				<th>Cantidad vendida</th>		
+	  		</tr>
+			<tr th:each="venta : ${vList}">
+				<td th:text = "${venta.idVenta}"></td>
+				<td th:text = "${venta.idProducto}"></td>
+				<td th:text = "${venta.cantidad}"></td>
+	  		</tr>
+		</table> 
+    </div>
+</div>
+</body>
+</html>
