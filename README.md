@@ -19,8 +19,9 @@ Tambien cuenta con 2 consultas directas en base de datos:
 
 ## Datos para correr el proyecto
 * Tener el jdk 1.8 instalado y mysql 
+* Instalar el gestor de dependencias maven https://maven.apache.org/download.cgi
 * Instalar el entorno para ejecutar el proyecto llamado Spring Tools for eclipse link: https://spring.io/tools
-* Antes de ejecutar el proyecto es necesario crear una bd en mysql llamada cafeteria
+* Antes de ejecutar el proyecto es necesario crear una bd en mysql llamada 'cafeteria'
 * Para ejecutar se debe abrir la carpeta donde se haya clonado el proyecto en Spring Tools y 
   en la clase CaferetriaDemoApplication.java clic derecho y clic en RunAs > spring boot app
 * Para validar que funciona correctamente deberia ver la pagina inicial en http://localhost:8082/index
